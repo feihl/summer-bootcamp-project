@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+  <title>3 Lucky Number Lottery</title>
+</head>
+<body>
+  <div class="lottery-container">
+    <h1>Select Your 3 Lucky Numbers</h1>
+    <form id="lotteryForm" method="POST" action="{{ url_for('savelot') }}">
+      <select class="dropdown" id="number1" name="number1">
+        <option value="000" disabled selected>000</option>
+        <!-- Options 1 to 30 -->
+        {% for i in range(1000) %}
+        <option value="{{ i }}">{{ '{:03}'.format(i) }}</option>
+    {% endfor %}
+      </select>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Find My Result</h2>
+    <form id="additionalInputForm" method="POST" action="{{ url_for('iden') }}">
+      <label for="userInput"></label>
+      <input type="number" id="userInput" name="userInput" placeholder="Indentification Code" min="0" max="9999999999">
+      <br><br>
+      <button type="submit">Find</button>
+    </form>
+    {% if message %}
+    <div class="result-message">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+  </div>
+</body>
+</html>

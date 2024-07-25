@@ -1,0 +1,113 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.lottery-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px; /* Adjusted for better readability */
+  margin: auto; /* Center align */
+}
+.lottery-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.dropdown {
+  width: 70px;
+  padding: 10px;
+  margin: 0 5px;
+  border: 2px solid #fda085;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+.lottery-container button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  background: #fda085;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.lottery-container button:hover {
+  background: #f6d365;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+#additionalInputForm {
+  margin-top: 20px; /* Add some space between the sections */
+  text-align: center; /* Center align the form */
+}
+#additionalInputForm label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+#additionalInputForm input[type="number"] {
+  width: 80%;
+  padding: 15px;
+  border: 2px solid #fda085;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+#additionalInputForm button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #fda085;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#additionalInputForm button[type="submit"]:hover {
+  background: #f6d365;
+}
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.popup.active {
+  display: block; /* Show when active */
+}
+.popup h2 {
+  margin-bottom: 10px;
+}
+.popup p {
+  margin-bottom: 20px;
+}
+.popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}

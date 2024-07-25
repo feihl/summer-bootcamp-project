@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Simple Chatbot BootCamp</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            ChatBot Makabulok
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                Hi there! I'm a simple chatbot. Type 'bye' to exit.
+            </div>
+            <!-- {% if result %}
+            <div class="message bot-message">
+                <strong>Result:</strong> {{ result }}
+            </div>
+            <div class="message bot-message">
+                Player 1: {{ p1_choice }}
+            </div>
+            <div class="message bot-message">
+                Computer Player 2: {{ c2_choice }}
+            </div>
+            <div class="message bot-message">
+                Computer Player 3: {{ c3_choice }}
+            </div>
+        {% endif %} -->
+
+
+
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeydown="checkEnter(event)">
+            <button onclick="sendMessage()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+            <button onclick="window.open('{{ url_for('lotto') }}', '_blank')" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+                Play A Game
+            </button>         
+        </div>
+
+
+
+            <!-- <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeydown="checkEnter(event)">
+            <button onclick="sendMessage()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+        </div>
+        <form method="POST" action="{{ url_for('hayang_kulob_game') }}" class="chat-input">
+            <button onclick="window.open('{{ url_for('lotto') }}', '_blank')" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer;">
+                Play A Game
+            </button>     
+        </form> -->
+
+
+        
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
